@@ -10,6 +10,7 @@
         font-size: 3.8rem;
         line-height: 5.2rem;
         width: fit-content;
+        height: fit-content;
         max-width: 40rem;
 
         color: $col_lightblack;
@@ -68,6 +69,17 @@
         border-radius: 4px;
         color: $col_white;
         background: $col_blue;
+
+        transition: opacity $tr_rules;;
+        
+        &:hover,
+        &:focus {
+            opacity: 0.8;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
     }
     
     &__link {

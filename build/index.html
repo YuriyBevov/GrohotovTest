@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="./css/styles.min.css">
   </head>
   <body class="cmn">
-    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 60 11">
-<path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd" d="M10 3.81528V0.635254L0 5.63525L10 10.6353V6.99528H59.9999V3.81528H10Z" fill="white"></path>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 61 11">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50.46 3.81528V0.635254L60.46 5.63525L50.46 10.6353V6.99528H0.460102V3.81528H50.46Z" fill="white"></path>
 </symbol><symbol id="icon-garbage" viewBox="0 0 36 36">
 <path d="M21.4291 14.9294C21.5687 14.9293 21.7025 14.8738 21.8012 14.7751C21.8999 14.6764 21.9553 14.5426 21.9554 14.403V11.4992C21.9553 11.3596 21.8999 11.2258 21.8012 11.1271C21.7025 11.0284 21.5687 10.973 21.4291 10.9729H16.0756V8.70455C16.0756 8.56496 16.0201 8.43109 15.9214 8.33238C15.8227 8.23368 15.6888 8.17822 15.5493 8.17822H6.40617C6.26658 8.17822 6.13271 8.23368 6.034 8.33238C5.9353 8.43109 5.87984 8.56496 5.87984 8.70455V10.9729H0.526329C0.386762 10.973 0.252935 11.0284 0.154246 11.1271C0.0555575 11.2258 7.96841e-05 11.3596 0 11.4992V14.403C7.96841e-05 14.5426 0.0555575 14.6764 0.154246 14.7751C0.252935 14.8738 0.386762 14.9293 0.526329 14.9294H1.38079L2.46983 35.1485C2.47721 35.283 2.53581 35.4095 2.63358 35.5022C2.73135 35.5948 2.86088 35.6465 2.99556 35.6466H18.9599C19.0945 35.6465 19.2241 35.5948 19.3218 35.5022C19.4196 35.4095 19.4782 35.283 19.4856 35.1485L20.5746 14.9294H21.4291ZM6.9325 9.23088H15.0229V10.9729H6.9325V9.23088ZM1.05266 12.0255H20.9028V13.8767H1.05266V12.0255ZM18.4612 34.5939H3.49422L2.43525 14.9294H19.5202L18.4612 34.5939Z" fill="#3D6AEB"></path>
 <path d="M6.99606 29.5156C7.13562 29.5155 7.26945 29.46 7.36814 29.3613C7.46683 29.2626 7.5223 29.1288 7.52238 28.9892V19.3093C7.52238 19.1697 7.46693 19.0358 7.36823 18.9371C7.26952 18.8384 7.13565 18.783 6.99606 18.783C6.85646 18.783 6.72259 18.8384 6.62388 18.9371C6.52518 19.0358 6.46973 19.1697 6.46973 19.3093V28.9892C6.46973 29.1288 6.52518 29.2627 6.62388 29.3614C6.72259 29.4601 6.85646 29.5156 6.99606 29.5156Z" fill="#3D6AEB"></path>
@@ -86,12 +86,13 @@
     <main>
       <section class="contacts">
         <div class="cmn__wrapper">
-          <h2 class="visually-hidden">Наши контакты</h2><span class="contacts__parallax-text">Contact us</span>
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <div id="contacts-scene"><span class="contacts__parallax-text" data-depth-x="1">Contact us</span></div>
           <div class="contacts__wrapper"> 
-            <picture>
+            <picture data-aos="fade-up" data-aos-delay="100">
               <source type="image/webp" srcset="./assets/img/cleaning@1x.webp 1x, ./assets/img/cleaning@1x.webp 2x"><img src="./assets/img/cleaning@1x.jpg" srcset="./assets/img/cleaning@1x.jpg" alt="клининг" width="752" height="379">
             </picture>
-            <div class="contacts__form">
+            <div class="contacts__form" data-aos="fade-left" data-aos-delay="200">
               <h3 class="contacts__form-title">Не нашли подходящую услугу или не знаете с чего начать?</h3>
               <p class="cmn__text cmn__text--gray contacts__form-desc">Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!</p>
               <form action="#">
@@ -110,6 +111,9 @@
       </section>
       <section class="certification">
         <div class="cmn__wrapper certification__wrapper">
+          <div class="certification__parallax" aria-hidden="true">
+            <div id="certification-scene"><span class="certification__parallax-text" data-depth-x="1">Certificate</span><img class="certification__parallax-item" src="./assets/img/ellipse.png" alt="эллипс" width="712" height="712" data-depth="1"><img class="certification__parallax-item" src="./assets/img/ellipse.png" alt="эллипс" width="712" height="712" data-depth="3"><img class="certification__parallax-item" src="./assets/img/ellipse.png" alt="эллипс" width="712" height="712" data-depth="6"></div>
+          </div>
           <div class="certification__container">
             <div class="certification__content">
               <h2 class="cmn__title cmn__title--white">Сертификаты</h2><span>Гарантия высокого качества работ</span>
@@ -154,6 +158,18 @@
                     </picture>
                   </div>
                 </div>
+                <div class="navigation"> 
+                  <div class="button-prev">
+                    <svg width="60" height="10">
+                      <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="button-next">
+                    <svg width="60" height="10">
+                      <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -167,27 +183,27 @@
           </div>
           <div class="results__content">
             <ul class="results__gallery">
-              <li class="results__item">
+              <li class="results__item" data-aos="fade-up">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_1@1x.webp 1x,./assets/img/res_1@2x.webp 2x"><img src="./assets/img/res_1@1x.png" srcset="./assets/img/res_1@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
                 </picture>
               </li>
-              <li class="results__item">
+              <li class="results__item" data-aos="fade-up">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_2@1x.webp 1x,./assets/img/res_2@2x.webp 2x"><img src="./assets/img/res_2@1x.png" srcset="./assets/img/res_2@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
                 </picture>
               </li>
-              <li class="results__item">
+              <li class="results__item" data-aos="fade-up">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_3@1x.webp 1x,./assets/img/res_3@2x.webp 2x"><img src="./assets/img/res_3@1x.png" srcset="./assets/img/res_3@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
                 </picture>
               </li>
-              <li class="results__item">
+              <li class="results__item" data-aos="fade-up">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_4@1x.webp 1x,./assets/img/res_4@2x.webp 2x"><img src="./assets/img/res_4@1x.png" srcset="./assets/img/res_4@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
                 </picture>
               </li>
-              <li class="results__item">
+              <li class="results__item" data-aos="fade-up">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_5@1x.webp 1x,./assets/img/res_5@2x.webp 2x"><img src="./assets/img/res_5@1x.png" srcset="./assets/img/res_5@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
                 </picture>

@@ -1,14 +1,15 @@
 section.contacts
     .cmn__wrapper
         h2.visually-hidden Наши контакты
-        span.contacts__parallax-text Contact us
+        #contacts-scene
+          span.contacts__parallax-text(data-depth-x="1") Contact us
         
         .contacts__wrapper  
-            picture
+            picture(data-aos="fade-up" data-aos-delay="100")
                 source(type="image/webp" srcset="./assets/img/cleaning@1x.webp 1x, ./assets/img/cleaning@1x.webp 2x")
                 img(src="./assets/img/cleaning@1x.jpg" srcset="./assets/img/cleaning@1x.jpg" alt="клининг" width="752" height="379")
 
-            .contacts__form
+            .contacts__form(data-aos="fade-left" data-aos-delay="200")
                 h3.contacts__form-title Не нашли подходящую услугу или не знаете с чего начать?
                 p.cmn__text.cmn__text--gray.contacts__form-desc Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!
 
@@ -23,6 +24,6 @@ section.contacts
                     button(type="submit").cmn__btn Отправить
                 
                 .contacts__form-banner
-                  span С вами свяжутся в течение 5 минут!
+                    span С вами свяжутся в течение 5 минут!
 
          

@@ -1,8 +1,122 @@
 .swiper-container {
-    height: 48rem;
+    position: relative;
+    width: 100%;
+    max-height: 55rem;
+    padding-bottom: 9rem;
+}
 
+.swiper-slide {
+    width: 320px;
+    &:not(.swiper-slide-active):not(.swiper-slide-next) {
+        opacity: 0.7;
+    }
+}
 
-    .swiper-slide {
-        height: 100%;
+.navigation {
+    position: absolute;
+    bottom: 0;
+    right: 1.5rem;
+    display: flex;
+    width: 16rem;
+    justify-content: space-between;
+
+    .button-next,
+    .button-prev {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 3rem;
+                height: 3rem;
+                content: '';
+                border-radius: 50%;
+                background-color: $col_orange;
+                transform: translateY(-50%);
+                z-index: -1;
+                animation: moveRound 2s forwards;
+            }
+        }
+    }
+
+    .button-prev {
+        transform: rotate(180deg);
+    }
+
+    .button-prev:not(.button-prev.swiper-button-disabled) {
+        transform: rotate(180deg);
+        &:hover,
+        &:focus {
+            animation: moveArrowLeft 1s forwards;
+        }
+    }
+
+    .button-next:not(.button-next.swiper-button-disabled) {
+        &:hover,
+        &:focus {
+            animation: moveArrowRight 1s forwards;
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.6;
+
+        &:hover,
+        &:focus {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes moveArrowLeft {
+    0% {
+        transform: rotate(180deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(-7px);
+    }
+
+    100% {
+        transform: rotate(180deg) translateX(0);
+    }
+}
+
+@keyframes moveArrowRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-7px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRound {
+    0% {
+        right: 0;
+        opacity: 0;
+    }
+
+    50% {
+        right: -1rem;
+        opacity: 1;
+    }
+
+    100% {
+        right: -1rem;
+        opacity: 1;
     }
 }

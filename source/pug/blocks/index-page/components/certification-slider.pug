@@ -57,3 +57,11 @@
         picture
           source(type="image/webp" srcset=slide.img + '@1x.webp 1x,' + slide.img + '@2x.webp 2x')
           img(src=slide.img + '@1x.jpg' srcset=slide.img + '@2x.jpg' alt=slide.name width=slide.imgWidth height=slide.imgHeight)
+
+  .navigation  
+    .button-prev
+      svg(width="60" height="10")
+        use(xlink:href="#icon-arrow")
+    .button-next
+      svg(width="60" height="10")
+        use(xlink:href="#icon-arrow")

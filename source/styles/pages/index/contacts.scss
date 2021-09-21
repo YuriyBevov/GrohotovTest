@@ -10,17 +10,19 @@
         padding-top: 30px;
     }
 
+    #contacts-scene {
+        position: absolute;
+        top: -16rem;
+        left: 4.7rem;
+    }
+
     &__parallax-text {
         font-family: $prim_extra;
         font-size: 19rem;
         line-height: 34rem;
         letter-spacing: 0.02em;
-
         
         display: table;
-        position: absolute;
-        top: -16rem;
-        left: 4.7rem;
         background: linear-gradient(91.74deg, #F9F9FE 19.36%, #F9F9FE 96.29%), linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
         color: #f9f9fe;
         opacity: 0.6;
