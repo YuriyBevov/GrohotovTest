@@ -6,12 +6,13 @@ $prim_semi: 'Raleway-SemiBold';
 $prim_bold: 'Raleway-Bold';
 $prim_extra: 'Raleway-ExtraBold';
 
+$sec_thin: 'MuseoSansCyrlThin';
 $sec_med: 'MuseoSansCyrlMed';
 $sec_bold: 'MuseoSansCyrlBold';
 
 // animation
 
-$tr_rules: 0.3s 0.1s ease;
+$tr_rules: 0.3s .2s ease;
 
 // widths
 
@@ -21,14 +22,21 @@ $min_width: 320px;
 
 // colors
 
+// $col_body: #e5e5e5;
+$col_body: #ffffff;
 $col_white: #ffffff;
 $col_black: #000000;
-
-// links
-
-//btns
+$col_black-sec: #333333;
+$col_lightblack: #202124;
+$col_gray: #646279;
+$col_blue: #5c6bc0;
+$col_orange: #Ea673d;
 
 // retina
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+/*background: linear-gradient(91.74deg, rgba(110, 124, 200, 0.64) 19.36%, #5C6BC0 96.29%),
+linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));*/
+

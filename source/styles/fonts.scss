@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "MuseoSansCyrlBold", sans-serif;
+    font-family: "MuseoSansCyrlBold";
     src: url("../fonts/MuseoSansCyrlBold.woff2") format("woff2"),
       url("../fonts/MuseoSansCyrlBold.woff") format("woff");
     font-weight: 700;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "MuseoSansCyrlMed", sans-serif;
+    font-family: "MuseoSansCyrlMed";
     src: url("../fonts/MuseoSansCyrlMed.woff2") format("woff2"),
       url("../fonts/MuseoSansCyrlMed.woff") format("woff");
     font-weight: 500;
@@ -17,7 +17,16 @@
 }
 
 @font-face {
-  font-family: "Raleway-ExtraBold", sans-serif;
+  font-family: "MuseoSansCyrlThin";
+  src: url("../fonts/MuseoSansCyrlThin.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrlThin.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-ExtraBold";
   src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2"),
     url("../fonts/Raleway-ExtraBold.woff") format("woff");
   font-weight: 800;
@@ -26,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "Raleway-Bold", sans-serif;
+  font-family: "Raleway-Bold";
   src: url("../fonts/Raleway-Bold.woff2") format("woff2"),
     url("../fonts/Raleway-Bold.woff") format("woff");
   font-weight: 700;
@@ -35,9 +44,9 @@
 }
 
 @font-face {
-  font-family: "Inter-SemiBold", sans-serif;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-family: "Raleway-SemiBold";
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"),
+    url("../fonts/Raleway-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -45,19 +54,19 @@
 
 
 @font-face {
-  font-family: "Inter-Medium", sans-serif;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"),
-    url("../fonts/Inter-Medium.woff") format("woff");
+  font-family: "Raleway-Medium";
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter-Regular", sans-serif;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 500;
+  font-family: "Raleway-Regular";
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"),
+    url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

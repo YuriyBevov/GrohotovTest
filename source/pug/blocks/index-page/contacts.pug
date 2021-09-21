@@ -1,0 +1,28 @@
+section.contacts
+    .cmn__wrapper
+        h2.visually-hidden Наши контакты
+        span.contacts__parallax-text Contact us
+        
+        .contacts__wrapper  
+            picture
+                source(type="image/webp" srcset="./assets/img/cleaning@1x.webp 1x, ./assets/img/cleaning@1x.webp 2x")
+                img(src="./assets/img/cleaning@1x.jpg" srcset="./assets/img/cleaning@1x.jpg" alt="клининг" width="752" height="379")
+
+            .contacts__form
+                h3.contacts__form-title Не нашли подходящую услугу или не знаете с чего начать?
+                p.cmn__text.cmn__text--gray.contacts__form-desc Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!
+
+                form(action="#")
+                    fieldset
+                        input(type="text" placeholder="Имя")
+                        input(type="text" placeholder="Телефон")
+
+                    input(type="checkbox" id="accept").visually-hidden
+                    label(for="accept") согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+
+                    button(type="submit").cmn__btn Отправить
+                
+                .contacts__form-banner
+                  span С вами свяжутся в течение 5 минут!
+
+         

@@ -1,7 +1,92 @@
 .cmn {
     &__wrapper {
         @include container();
+        position: relative;
     }
 
- 
+    &__title {
+        position: relative;
+        font-family: $prim_bold;
+        font-size: 3.8rem;
+        line-height: 5.2rem;
+        width: fit-content;
+        max-width: 40rem;
+
+        color: $col_lightblack;
+
+        &::after {
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            content: '';
+
+            background-color: $col_orange;
+
+            z-index: -1;
+        }
+
+        &--white {
+            color: $col_white;
+        }
+    }
+
+    &__subtitle {
+        font-family: $prim_semi;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+
+        color: $col_lightblack;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+
+        color: $col_black;
+
+        &--gray {
+            color: $col_gray;
+        }
+
+        &--white {
+            color: $col_white;
+        }
+    }
+
+    &__btn {
+        font-family: $prim_semi;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+
+        width: fit-content;
+        min-width: 19rem;
+
+        padding: 1.5rem;
+        border: 0;
+        border-radius: 4px;
+        color: $col_white;
+        background: $col_blue;
+    }
+    
+    &__link {
+        position: relative;
+        font-family: $prim_med;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+
+        color: $col_orange;
+        
+        &::after {
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            content: '';
+
+            background-color: $col_orange;
+        }
+    }
 }   

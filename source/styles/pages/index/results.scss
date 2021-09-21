@@ -1,0 +1,39 @@
+.results {
+    padding-top: 12.4rem;
+    padding-bottom: 17.4rem;
+
+    &__desc {
+        font-size: 2rem;
+        max-width: 50rem;
+        padding: 0 1.5rem;
+    }
+
+    &__header {
+        display: flex;
+        max-width: 100rem;
+        margin-bottom: 23rem; // temp ?
+
+        h2 {
+            margin-right: auto;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+
+        picture {
+            height: 100%;
+            max-height: 46.6rem;
+        }
+    }
+
+    &__item {
+        width: 20%;
+        max-width: 20rem;
+
+        &:not(:last-child) {
+            margin-right: auto;
+        }
+
+    }
+}

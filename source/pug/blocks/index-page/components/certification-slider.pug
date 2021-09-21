@@ -1,0 +1,59 @@
+-
+  const slides = [
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+
+      {
+          img: './assets/img/certificate',
+          imgWidth: '320',
+          imgHeight: '460',
+          name: 'Сертификат соответствия'
+      },
+  ]
+
+.swiper-container
+  .swiper-wrapper
+    each slide in slides
+      .swiper-slide
+        picture
+          source(type="image/webp" srcset=slide.img + '@1x.webp 1x,' + slide.img + '@2x.webp 2x')
+          img(src=slide.img + '@1x.jpg' srcset=slide.img + '@2x.jpg' alt=slide.name width=slide.imgWidth height=slide.imgHeight)

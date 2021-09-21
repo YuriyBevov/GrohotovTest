@@ -1,0 +1,53 @@
+-
+  const gallery = [
+      {
+          url: './assets/img/res_1',
+          height: '466',
+          width: '200',
+          name: 'Lorem ipsum'
+      },
+
+      {
+          url: './assets/img/res_2',
+          height: '466',
+          width: '200',
+          name: 'Lorem ipsum'
+      },
+
+      {
+          url: './assets/img/res_3',
+          height: '466',
+          width: '200',
+          name: 'Lorem ipsum'
+      },
+
+      {
+          url: './assets/img/res_4',
+          height: '466',
+          width: '200',
+          name: 'Lorem ipsum'
+      },
+
+      {
+          url: './assets/img/res_5',
+          height: '466',
+          width: '200',
+          name: 'Lorem ipsum'
+      },
+  ]
+
+section.results
+    .cmn__wrapper.results__wrapper
+        .results__header
+            h2.cmn__title Результаты работы
+            p.cmn__text.cmn__text--gray.results__desc Ежедневная уборка коммерческих помещений, спецработы, уборка на мероприятиях, а также специальные услуги.
+        
+        .results__content
+            ul.results__gallery
+                each item in gallery
+                    li.results__item
+                        picture
+                            source(type="image/webp" srcset=item.url + '@1x.webp 1x,' + item.url + '@2x.webp 2x')
+                            img(src=item.url + '@1x.png' srcset=item.url + '@2x.png' alt="Почему круто быть с нами:" width=item.width height=item.height)
+                
+            

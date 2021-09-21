@@ -44,8 +44,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: $font_reg, sans-serif;
+  font-family: $prim_reg, sans-serif;
   overflow-x: hidden;
+  background-color: $col_body;
 }
 
 footer {
@@ -77,6 +78,22 @@ a {
 
 input, textarea {
   border-radius: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .visually-hidden {
