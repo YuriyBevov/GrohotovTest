@@ -125,13 +125,25 @@
             margin-right: 4rem;
             color: $col_black-sec;
 
+            transition: color $tr_rules;
+
             &::placeholder {
                 font-family: $prim_reg;
                 font-size: 1.6rem;
                 line-height: 3rem;
                 opacity: 0.2;
 
-                color: $col_black-sec;                
+                color: $col_black-sec;
+                transition: color $tr_rules, opacity $tr_rules;             
+            }
+
+            &.invalid-field {
+                color: $col_orange;
+
+                &::placeholder {
+                    opacity: 1;
+                    color: $col_orange;
+                }
             }
         }
 
@@ -158,11 +170,19 @@
                 border: 1px solid #DBDBDB;
                 border-radius: 4px;
                 background: $col_white;
+
+                transition: border $tr_rules;
             }
         }
 
+        input.invalid-field + label::before {
+            border: 1px solid $col_orange; 
+        }
+
         input:checked + label::before {
-            background-color: $col_orange;
+            background-size: cover;
+            background-repeat: no-repeat ;
+            background-image: url('../assets/img/accept-icon.svg');
         }
     }
 }

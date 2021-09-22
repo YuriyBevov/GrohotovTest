@@ -25617,6 +25617,30 @@ serviceItems.forEach((item,i) => {
 
 /***/ }),
 
+/***/ "./source/scripts/modules/loader.js":
+/*!******************************************!*\
+  !*** ./source/scripts/modules/loader.js ***!
+  \******************************************/
+/*! exports provided: loaderInit */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loaderInit", function() { return loaderInit; });
+const loader = document.getElementById('loader');
+
+function loaderInit(status) {
+    if(status) {
+        loader.classList.add('showed');
+    } else {
+        loader.classList.remove('showed');
+    }
+}
+
+
+
+/***/ }),
+
 /***/ "./source/scripts/modules/parallax.js":
 /*!********************************************!*\
   !*** ./source/scripts/modules/parallax.js ***!
@@ -25662,6 +25686,36 @@ if (phoneInput) {
 
 /***/ }),
 
+/***/ "./source/scripts/modules/sendForm/cleanFormFields.js":
+/*!************************************************************!*\
+  !*** ./source/scripts/modules/sendForm/cleanFormFields.js ***!
+  \************************************************************/
+/*! exports provided: cleanFormFields */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanFormFields", function() { return cleanFormFields; });
+function cleanFormFields(form) {
+    if(form) {
+        const fields = form.querySelectorAll('input');
+
+        fields.forEach(field => {
+            const fieldType = field.getAttribute('type');
+
+            if(fieldType !== 'checkbox') {
+                field.value = ''
+            } else {
+                field.checked = false
+            }
+        })
+    }
+}
+
+
+
+/***/ }),
+
 /***/ "./source/scripts/modules/sendForm/formStatus.js":
 /*!*******************************************************!*\
   !*** ./source/scripts/modules/sendForm/formStatus.js ***!
@@ -25672,8 +25726,25 @@ if (phoneInput) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formStatus", function() { return formStatus; });
-const formStatus = (status, text) => {
-    console.log(status, text)
+/* harmony import */ var _cleanFormFields_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cleanFormFields.js */ "./source/scripts/modules/sendForm/cleanFormFields.js");
+
+
+const formStatusModal = document.querySelector('.form-status-modal');
+const messageField = formStatusModal.querySelector('span');
+const modalCloseBtn = formStatusModal.querySelector('button');
+
+const formStatus = (text, form = null) => {
+    messageField.innerHTML = text;
+
+    formStatusModal.classList.add('showed');
+
+    const onClickCloseModal = () => {
+        Object(_cleanFormFields_js__WEBPACK_IMPORTED_MODULE_0__["cleanFormFields"])(form);
+        formStatusModal.classList.remove('showed');
+        modalCloseBtn.removeEventListener('click', onClickCloseModal);
+    }
+
+    modalCloseBtn.addEventListener('click', onClickCloseModal)
 }
 
 
@@ -25690,8 +25761,12 @@ const formStatus = (status, text) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formValidation", function() { return formValidation; });
-/* harmony import */ var _sendForm_sendRequest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sendForm/sendRequest.js */ "./source/scripts/modules/sendForm/sendRequest.js");
-/* harmony import */ var _validationField_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./validationField.js */ "./source/scripts/modules/sendForm/validationField.js");
+/* harmony import */ var _sendRequest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sendRequest.js */ "./source/scripts/modules/sendForm/sendRequest.js");
+/* harmony import */ var _formStatus_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./formStatus.js */ "./source/scripts/modules/sendForm/formStatus.js");
+/* harmony import */ var _loader_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../loader.js */ "./source/scripts/modules/loader.js");
+/* harmony import */ var _validationField_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./validationField.js */ "./source/scripts/modules/sendForm/validationField.js");
+
+
 
 
 const testURL = 'https://jsonplaceholder.typicode.com/users';
@@ -25712,7 +25787,7 @@ function formValidation(form) {
 
         if(fieldType === 'tel') {
             if(field.value.length < 16) {
-                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_1__["validationField"])('test')
+                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_3__["validationField"])(field)
                 isFormValid = false;
             } else {
                 formBody.userName = field.value;
@@ -25721,7 +25796,7 @@ function formValidation(form) {
 
         if(fieldType === 'text') {
             if(!field.value) {
-                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_1__["validationField"])('test')
+                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_3__["validationField"])(field)
                 isFormValid = false;
             } else {
                 formBody.userPhone = field.value;
@@ -25730,7 +25805,7 @@ function formValidation(form) {
 
         if(fieldType === 'checkbox') {
             if(!field.checked) {
-                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_1__["validationField"])('test')
+                Object(_validationField_js__WEBPACK_IMPORTED_MODULE_3__["validationField"])(field)
                 isFormValid = false;
             } else {
                 formBody.isRulesAccepted = true;
@@ -25738,12 +25813,18 @@ function formValidation(form) {
         }
     })
 
-    isFormValid ? 
-        Object(_sendForm_sendRequest_js__WEBPACK_IMPORTED_MODULE_0__["sendRequest"])('POST', testURL, formBody)
-        .then( data => console.log(data))
-        .catch(err => console.log(err))
-
-    : null
+    if(isFormValid) {
+        Object(_loader_js__WEBPACK_IMPORTED_MODULE_2__["loaderInit"])(true);
+        Object(_sendRequest_js__WEBPACK_IMPORTED_MODULE_0__["sendRequest"])('POST', testURL, formBody)
+        .then( data => {
+            Object(_formStatus_js__WEBPACK_IMPORTED_MODULE_1__["formStatus"])('Данные переданы успешно', form);
+            Object(_loader_js__WEBPACK_IMPORTED_MODULE_2__["loaderInit"])(false);
+        })
+        .catch(err => {
+            Object(_formStatus_js__WEBPACK_IMPORTED_MODULE_1__["formStatus"])('Произошла ошибка передачи данных');
+            Object(_loader_js__WEBPACK_IMPORTED_MODULE_2__["loaderInit"])(false);
+        })
+    }
 }
 
 
@@ -25783,26 +25864,17 @@ submitFormBtn.addEventListener('click', function(evt){
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendRequest", function() { return sendRequest; });
-/* harmony import */ var _formStatus_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formStatus.js */ "./source/scripts/modules/sendForm/formStatus.js");
-
-
 function sendRequest(method, url, body = null) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        
+        xhr.open(method, url);      
         xhr.responseType = 'json';
-
         xhr.setRequestHeader('Content-Type', 'application/json')
         
         xhr.onload = () => {
             if(xhr.status >= 400) {
-                console.log('error')
-                Object(_formStatus_js__WEBPACK_IMPORTED_MODULE_0__["formStatus"])(false, 'Произошла ошибка передачи данных');
                 reject(xhr.response)
             } else {
-                console.log('success')
-                Object(_formStatus_js__WEBPACK_IMPORTED_MODULE_0__["formStatus"])(true, 'Данные переданы успешно');
                 resolve(xhr.response)
             }
         }
@@ -25827,8 +25899,17 @@ function sendRequest(method, url, body = null) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationField", function() { return validationField; });
-const validationField = (text) => {
-    console.log(text)
+const validationField = (field) => {
+    if(!field.classList.contains('invalid-field')) {
+        field.classList.add('invalid-field');
+
+        const onChangeRemoveInvalidStatus = () => {
+            field.classList.remove('invalid-field');
+            field.removeEventListener('change', onChangeRemoveInvalidStatus)
+        }
+        
+        field.addEventListener('change', onChangeRemoveInvalidStatus)
+    }
 }
 
 

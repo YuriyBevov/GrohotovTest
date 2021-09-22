@@ -1,4 +1,6 @@
-import {sendRequest} from '../sendForm/sendRequest.js';
+import {sendRequest} from './sendRequest.js';
+import {formStatus} from './formStatus.js';
+import {loaderInit} from '../loader.js';
 
 const testURL = 'https://jsonplaceholder.typicode.com/users';
 const xhr = new XMLHttpRequest();
@@ -18,7 +20,7 @@ function formValidation(form) {
 
         if(fieldType === 'tel') {
             if(field.value.length < 16) {
-                validationField('test')
+                validationField(field)
                 isFormValid = false;
             } else {
                 formBody.userName = field.value;
@@ -27,7 +29,7 @@ function formValidation(form) {
 
         if(fieldType === 'text') {
             if(!field.value) {
-                validationField('test')
+                validationField(field)
                 isFormValid = false;
             } else {
                 formBody.userPhone = field.value;
@@ -36,7 +38,7 @@ function formValidation(form) {
 
         if(fieldType === 'checkbox') {
             if(!field.checked) {
-                validationField('test')
+                validationField(field)
                 isFormValid = false;
             } else {
                 formBody.isRulesAccepted = true;
@@ -44,12 +46,18 @@ function formValidation(form) {
         }
     })
 
-    isFormValid ? 
+    if(isFormValid) {
+        loaderInit(true);
         sendRequest('POST', testURL, formBody)
-        .then( data => console.log(data))
-        .catch(err => console.log(err))
-
-    : null
+        .then( data => {
+            formStatus('Данные переданы успешно', form);
+            loaderInit(false);
+        })
+        .catch(err => {
+            formStatus('Произошла ошибка передачи данных');
+            loaderInit(false);
+        })
+    }
 }
 
 export {formValidation}
