@@ -89,21 +89,23 @@
           <h2 class="visually-hidden">Наши контакты</h2>
           <div id="contacts-scene"><span class="contacts__parallax-text" data-depth-x="1">Contact us</span></div>
           <div class="contacts__wrapper"> 
-            <picture data-aos="fade-up" data-aos-delay="100">
+            <picture data-aos="fade-up">
               <source type="image/webp" srcset="./assets/img/cleaning@1x.webp 1x, ./assets/img/cleaning@1x.webp 2x"><img src="./assets/img/cleaning@1x.jpg" srcset="./assets/img/cleaning@1x.jpg" alt="клининг" width="752" height="379">
             </picture>
-            <div class="contacts__form" data-aos="fade-left" data-aos-delay="200">
-              <h3 class="contacts__form-title">Не нашли подходящую услугу или не знаете с чего начать?</h3>
-              <p class="cmn__text cmn__text--gray contacts__form-desc">Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!</p>
-              <form action="#">
-                <fieldset>
-                  <input type="text" placeholder="Имя">
-                  <input type="text" placeholder="Телефон">
-                </fieldset>
-                <input class="visually-hidden" type="checkbox" id="accept">
-                <label for="accept">согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.</label>
-                <button class="cmn__btn" type="submit">Отправить</button>
-              </form>
+            <div class="contacts__form" data-aos="fade-right">
+              <div class="contacts__form-wrapper">
+                <h3 class="contacts__form-title">Не нашли подходящую услугу или не знаете с чего начать?</h3>
+                <p class="cmn__text cmn__text--gray contacts__form-desc">Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!</p>
+                <form action="#" id="user_form">
+                  <fieldset>
+                    <input type="text" placeholder="Имя" id="user_name">
+                    <input type="tel" placeholder="Телефон" id="user_phone">
+                  </fieldset>
+                  <input class="visually-hidden" type="checkbox" id="user_accept">
+                  <label for="user_accept">согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.</label>
+                  <button class="cmn__btn" type="submit">Отправить</button>
+                </form>
+              </div>
               <div class="contacts__form-banner"><span>С вами свяжутся в течение 5 минут!</span></div>
             </div>
           </div>
@@ -116,8 +118,8 @@
           </div>
           <div class="certification__container">
             <div class="certification__content">
-              <h2 class="cmn__title cmn__title--white">Сертификаты</h2><span>Гарантия высокого качества работ</span>
-              <p class="cmn__text cmn__text--white">В компании «Стс-Уборка» ежегодно выполняет  сертификацию клининговых услуг с&nbsp;правом аккредитации других организаций в качестве Органов по сертификации в Системе СДС «СККР».</p>
+              <h2 class="cmn__title cmn__title--white">Сертификаты</h2><span data-aos="fade-up" data-aos-delay="200">Гарантия высокого качества работ</span>
+              <p class="cmn__text cmn__text--white" data-aos="zoom-in" data-aos-delay="300">В компании «Стс-Уборка» ежегодно выполняет  сертификацию клининговых услуг с&nbsp;правом аккредитации других организаций в качестве Органов по сертификации в Системе СДС «СККР».</p>
             </div>
             <div class="certification__slider">
               <div class="swiper-container">
@@ -183,30 +185,30 @@
           </div>
           <div class="results__content">
             <ul class="results__gallery">
-              <li class="results__item" data-aos="fade-up">
+              <li class="results__item js-results-gsap-item">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_1@1x.webp 1x,./assets/img/res_1@2x.webp 2x"><img src="./assets/img/res_1@1x.png" srcset="./assets/img/res_1@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
-                </picture>
+                </picture><span>Lorem ipsum</span>
               </li>
-              <li class="results__item" data-aos="fade-up">
+              <li class="results__item js-results-gsap-item">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_2@1x.webp 1x,./assets/img/res_2@2x.webp 2x"><img src="./assets/img/res_2@1x.png" srcset="./assets/img/res_2@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
-                </picture>
+                </picture><span>Lorem ipsum</span>
               </li>
-              <li class="results__item" data-aos="fade-up">
+              <li class="results__item js-results-gsap-item">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_3@1x.webp 1x,./assets/img/res_3@2x.webp 2x"><img src="./assets/img/res_3@1x.png" srcset="./assets/img/res_3@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
-                </picture>
+                </picture><span>Lorem ipsum</span>
               </li>
-              <li class="results__item" data-aos="fade-up">
+              <li class="results__item js-results-gsap-item">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_4@1x.webp 1x,./assets/img/res_4@2x.webp 2x"><img src="./assets/img/res_4@1x.png" srcset="./assets/img/res_4@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
-                </picture>
+                </picture><span>Lorem ipsum</span>
               </li>
-              <li class="results__item" data-aos="fade-up">
+              <li class="results__item js-results-gsap-item">
                 <picture>
                   <source type="image/webp" srcset="./assets/img/res_5@1x.webp 1x,./assets/img/res_5@2x.webp 2x"><img src="./assets/img/res_5@1x.png" srcset="./assets/img/res_5@2x.png" alt="Почему круто быть с нами:" width="200" height="466">
-                </picture>
+                </picture><span>Lorem ipsum</span>
               </li>
             </ul>
           </div>
@@ -219,64 +221,186 @@
             <div class="service__tabs">
               <div class="tabs">
                 <ul class="tabs__list">
-                  <li class="tabs__item"> <span>Компаниям</span></li>
-                  <li class="tabs__item"> <span>Частным клиентам</span></li>
-                  <li class="tabs__item"> <span>Спец. услуги</span></li>
+                  <li class="tabs__item">
+                    <button class="tabs__item-btn tabs__item-btn--active" data-id="1"><span>Компаниям</span></button>
+                  </li>
+                  <li class="tabs__item"> 
+                    <button class="tabs__item-btn" data-id="2"><span>Частным клиентам</span></button>
+                  </li>
+                  <li class="tabs__item">
+                    <button class="tabs__item-btn tabs__item-btn--special" data-id="3"><span>Спец. услуги</span></button>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-          <ul class="service__list">
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+          <ul class="service__list active">
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="27" height="32">
                   <use xlink:href="#icon-hand"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Ежедневная уборка</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="35" height="35">
                   <use xlink:href="#icon-vacuum"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Промышленный клининг</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="35" height="35">
                   <use xlink:href="#icon-window"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Мойка окон и фасадов</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="35" height="35">
                   <use xlink:href="#icon-office"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Уборка офисов под ключ</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="35" height="35">
                   <use xlink:href="#icon-garbage"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Послестроительная уборка</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="36" height="36">
                   <use xlink:href="#icon-home"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Клининг для ТСЖ, ЖСК, УК</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="36" height="36">
                   <use xlink:href="#icon-party"></use>
                 </svg>
                 <h3 class="cmn__subtitle">Обслуживание мероприятий</h3>
                 <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
                 <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
-            <li class="service__item"><a href="#" aria-label="Подробнее"> 
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="40" height="36">
+                  <use xlink:href="#icon-personal"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Предоставление персонала</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+          </ul>
+          <ul class="service__list">
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-window"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Мойка окон и фасадов</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-office"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Уборка офисов под ключ</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-garbage"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Послестроительная уборка</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="40" height="36">
+                  <use xlink:href="#icon-personal"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Предоставление персонала</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-home"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Клининг для ТСЖ, ЖСК, УК</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="27" height="32">
+                  <use xlink:href="#icon-hand"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Ежедневная уборка</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-vacuum"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Промышленный клининг</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-party"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Обслуживание мероприятий</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+          </ul>
+          <ul class="service__list">
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-office"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Уборка офисов под ключ</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-garbage"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Послестроительная уборка</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="27" height="32">
+                  <use xlink:href="#icon-hand"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Ежедневная уборка</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-home"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Клининг для ТСЖ, ЖСК, УК</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-party"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Обслуживание мероприятий</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-vacuum"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Промышленный клининг</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-window"></use>
+                </svg>
+                <h3 class="cmn__subtitle">Мойка окон и фасадов</h3>
+                <p class="cmn__text cmn__text--gray">Квартир, зданий, производственных помещений и офисов</p>
+                <div class="service__item-footer"><span class="cmn__link service__item-link">Подробнее</span></div></a></li>
+            <li class="service__item js-service-gsap-item"><a href="#" aria-label="Подробнее"> 
                 <svg width="40" height="36">
                   <use xlink:href="#icon-personal"></use>
                 </svg>

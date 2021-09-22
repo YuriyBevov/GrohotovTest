@@ -30,9 +30,14 @@
     &__item {
         width: 20%;
         max-width: 20rem;
-        overflow: hidden;
+        
+        picture {
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
 
         img {
+            
             transition: transform 0.5s 0.1s ease;
         }
 
@@ -43,9 +48,16 @@
             }
         }
         
-
         &:not(:last-child) {
             margin-right: auto;
+        }
+
+        span {
+            font-family: $prim_bold;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+
+            color: $col_black;
         }
 
     }

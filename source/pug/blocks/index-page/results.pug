@@ -45,9 +45,9 @@ section.results
         .results__content
             ul.results__gallery
                 each item in gallery
-                    li.results__item(data-aos="fade-up")
+                    li.results__item.js-results-gsap-item
                         picture
                             source(type="image/webp" srcset=item.url + '@1x.webp 1x,' + item.url + '@2x.webp 2x')
                             img(src=item.url + '@1x.png' srcset=item.url + '@2x.png' alt="Почему круто быть с нами:" width=item.width height=item.height)
-                
+                        span=item.name
             

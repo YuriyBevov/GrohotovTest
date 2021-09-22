@@ -1,5 +1,5 @@
 -
-  const service_list = [
+  const service_list1 = [
     {
         icon: '#icon-hand',
         iconWidth: '27',
@@ -73,15 +73,192 @@
     },
   ]
 
+-
+  const service_list2 = [
+
+    {
+        icon: '#icon-window',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Мойка окон и фасадов',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-office',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Уборка офисов под ключ',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-garbage',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Послестроительная уборка',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+    
+
+    {
+        icon: '#icon-personal',
+        iconWidth: '40',
+        iconHeight: '36',
+        title: 'Предоставление персонала',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-home',
+        iconWidth: '36',
+        iconHeight: '36',
+        title: 'Клининг для ТСЖ, ЖСК, УК',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-hand',
+        iconWidth: '27',
+        iconHeight: '32',
+        title: 'Ежедневная уборка',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-vacuum',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Промышленный клининг',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-party',
+        iconWidth: '36',
+        iconHeight: '36',
+        title: 'Обслуживание мероприятий',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+  ]
+
+-
+  const service_list3 = [
+
+    {
+        icon: '#icon-office',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Уборка офисов под ключ',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-garbage',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Послестроительная уборка',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-hand',
+        iconWidth: '27',
+        iconHeight: '32',
+        title: 'Ежедневная уборка',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-home',
+        iconWidth: '36',
+        iconHeight: '36',
+        title: 'Клининг для ТСЖ, ЖСК, УК',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-party',
+        iconWidth: '36',
+        iconHeight: '36',
+        title: 'Обслуживание мероприятий',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-vacuum',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Промышленный клининг',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-window',
+        iconWidth: '35',
+        iconHeight: '35',
+        title: 'Мойка окон и фасадов',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+
+    {
+        icon: '#icon-personal',
+        iconWidth: '40',
+        iconHeight: '36',
+        title: 'Предоставление персонала',
+        desc: 'Квартир, зданий, производственных помещений и офисов',
+        link: 'Подробнее'
+    },
+  ]
+
 section.service
     .cmn__wrapper.service__wrapper
         .service__header
             h2.cmn__title Выберите услугу
             .service__tabs
                 include ./components/tabs
+        ul.service__list.active
+            each service in service_list1
+                li.service__item.js-service-gsap-item
+                    a(href="#" aria-label="Подробнее") 
+                        svg(width= service.iconWidth height= service.iconHeight)
+                            use(xlink:href=service.icon)
+                        h3.cmn__subtitle= service.title
+                        p.cmn__text.cmn__text--gray= service.desc
+                        
+                        .service__item-footer
+                            span.cmn__link.service__item-link= service.link
+
         ul.service__list
-            each service in service_list
-                li.service__item
+            each service in service_list2
+                li.service__item.js-service-gsap-item
+                    a(href="#" aria-label="Подробнее") 
+                        svg(width= service.iconWidth height= service.iconHeight)
+                            use(xlink:href=service.icon)
+                        h3.cmn__subtitle= service.title
+                        p.cmn__text.cmn__text--gray= service.desc
+                        
+                        .service__item-footer
+                            span.cmn__link.service__item-link= service.link
+        
+        ul.service__list
+            each service in service_list3
+                li.service__item.js-service-gsap-item
                     a(href="#" aria-label="Подробнее") 
                         svg(width= service.iconWidth height= service.iconHeight)
                             use(xlink:href=service.icon)

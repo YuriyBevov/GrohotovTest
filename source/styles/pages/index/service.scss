@@ -1,13 +1,42 @@
 .service {
     padding-bottom: 20rem;
 
-    &__tabs {
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10rem;
 
+        h2 {
+            margin-right: auto;
+        }
+    }
+
+    &__tabs {
+        width: 60%;
+        max-width: 58rem;
     }
 
     &__list {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
+
+        &.active {
+            display: flex;
+
+            animation: fade-up 0.5s forwards;
+        }
+
+        @keyframes fade-up {
+            0% {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     }
 
     &__item {

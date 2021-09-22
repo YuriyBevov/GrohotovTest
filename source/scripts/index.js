@@ -1,14 +1,10 @@
 'use strict'
 
+import phoneMask from './modules/phoneMask.js';
 import slider from './modules/slider.js';
-import parallax from './modules/parallax.js';
 import aos from './modules/aos.js';
+import parallax from './modules/parallax.js';
+import gsap from './modules/gsap.js';
+import serviceBlockTabs from './modules/serviceBlockTabs.js';
 
-
-/*const galleryItems = document.querySelectorAll('.results__item');
-
-galleryItems.forEach((item,i) => {
-    console.log(item,i)
-
-    item.setAttribute("data-aos-offset", 300 * i + 1);
-}); */
+import sendFormData from './modules/sendForm/sendFormData.js';

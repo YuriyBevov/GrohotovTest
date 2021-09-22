@@ -7,7 +7,6 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding-top: 30px;
     }
 
     #contacts-scene {
@@ -46,15 +45,17 @@
     }
 
     &__form {
-        position: absolute;
-        top: 0;
-        right: 60px;
+        position: relative;
         width: 100%;
         max-width: 52.8rem;
-        padding: 4.5rem 4rem;
         margin-left: -6rem;
         background-color: $col_white;
         box-shadow: -50px 40px 120px rgba(121, 125, 146, 0.17);
+
+        &-wrapper {
+            background-color: white;
+            padding: 4.5rem 4rem;
+        }
 
         &-title {
             font-family: $prim_med;
@@ -142,6 +143,7 @@
             max-width: 33.7rem;
             padding-left: 2.4rem;
             margin-bottom: 2.8rem;
+            cursor: pointer;
             color: $col_black-sec;
 
             &:before {
@@ -160,7 +162,7 @@
         }
 
         input:checked + label::before {
-            background-color: red;
+            background-color: $col_orange;
         }
     }
 }

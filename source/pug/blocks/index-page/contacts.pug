@@ -5,23 +5,24 @@ section.contacts
           span.contacts__parallax-text(data-depth-x="1") Contact us
         
         .contacts__wrapper  
-            picture(data-aos="fade-up" data-aos-delay="100")
+            picture(data-aos="fade-up")
                 source(type="image/webp" srcset="./assets/img/cleaning@1x.webp 1x, ./assets/img/cleaning@1x.webp 2x")
                 img(src="./assets/img/cleaning@1x.jpg" srcset="./assets/img/cleaning@1x.jpg" alt="клининг" width="752" height="379")
 
-            .contacts__form(data-aos="fade-left" data-aos-delay="200")
-                h3.contacts__form-title Не нашли подходящую услугу или не знаете с чего начать?
-                p.cmn__text.cmn__text--gray.contacts__form-desc Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!
+            .contacts__form(data-aos="fade-right")
+                .contacts__form-wrapper
+                    h3.contacts__form-title Не нашли подходящую услугу или не знаете с чего начать?
+                    p.cmn__text.cmn__text--gray.contacts__form-desc Оставьте заявку и наш специалист свяжется с вами, даст полную и детальную информацию бесплатно!
 
-                form(action="#")
-                    fieldset
-                        input(type="text" placeholder="Имя")
-                        input(type="text" placeholder="Телефон")
+                    form(action="#" id="user_form")
+                        fieldset
+                            input(type="text" placeholder="Имя" id="user_name")
+                            input(type="tel" placeholder="Телефон" id="user_phone")
 
-                    input(type="checkbox" id="accept").visually-hidden
-                    label(for="accept") согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+                        input(type="checkbox" id="user_accept").visually-hidden
+                        label(for="user_accept") согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
 
-                    button(type="submit").cmn__btn Отправить
+                        button(type="submit").cmn__btn Отправить
                 
                 .contacts__form-banner
                     span С вами свяжутся в течение 5 минут!
