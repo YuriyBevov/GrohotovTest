@@ -3,6 +3,7 @@ import {formStatus} from './formStatus.js';
 import {loaderInit} from '../loader.js';
 
 const testURL = 'https://jsonplaceholder.typicode.com/users';
+
 const xhr = new XMLHttpRequest();
 xhr.open('POST', testURL);
 
